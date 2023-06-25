@@ -95,6 +95,8 @@ h1 {
   color: #a3ffae;
   font-size: var(--fs-S);
   margin-right: 1rem;
+
+  align-self: center;
   display: none;
 }
 
@@ -343,6 +345,10 @@ h1 {
     width: 45rem;
   }
 
+  #password-display #copy p {
+    font-size: 1.6rem;
+  }
+
   #password-components button[data-icon="arrow"]::after {
     transform: translateX(2rem);
   }
@@ -368,6 +374,10 @@ h1 {
 
   #password-display > p {
     font-size: var(--fs-M);
+  }
+
+  #password-display #copy p {
+    font-size: 1.2rem;
   }
 
   #password-components #length #length-text p:nth-of-type(2) {
