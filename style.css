@@ -1,0 +1,384 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --clr-grey-800: #191820;
+  --clr-grey-500: hsl(248, 10%, 15%);
+  --clr-grey-300: hsl(251, 9%, 53%);
+  --clr-white: #e7e6eb;
+  --clr-green: #a3ffae;
+  --clr-red: #f74b4b;
+  --clr-orange: #fb7a56;
+  --clr-yellow: #f8cb63;
+
+  --fs-L: 3.2rem;
+  --fs-M: 2.4rem;
+  --fs-S: 1.8rem;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-size: var(--fs-S);
+  font-weight: 700;
+  font-family: "JetBrains Mono", monospace;
+  background-color: var(--clr-grey-800);
+
+  display: grid;
+  place-content: center;
+}
+
+/***** Dynamic Class(es) *****/
+
+.show {
+  display: flex !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+/************************************ Main Styles ************************************/
+#container {
+  width: 54rem;
+}
+
+h1 {
+  font-size: var(--fs-M);
+  color: var(--clr-grey-300);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+#password-display,
+#password-components {
+  background-color: var(--clr-grey-500);
+}
+
+#password-display {
+  margin-bottom: 2.4rem;
+  padding: 2rem 3.2rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+#password-display > p {
+  font-size: var(--fs-L);
+  opacity: 0.2;
+  color: var(--clr-white);
+}
+
+#password-display #copy {
+  cursor: pointer;
+  align-self: center;
+
+  display: flex;
+}
+
+#password-display #copy:hover {
+  filter: brightness(2);
+}
+
+#password-display #copy p {
+  color: #a3ffae;
+  font-size: var(--fs-S);
+  margin-right: 1rem;
+  display: none;
+}
+
+#password-components {
+  padding: 2.4rem 3.2rem;
+}
+
+#password-components #length #length-text {
+  margin-bottom: 2.4rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+#password-components #length #length-text > p {
+  color: var(--clr-white);
+  align-self: center;
+}
+
+#password-components #length #length-text p:nth-of-type(2) {
+  color: var(--clr-green);
+  font-size: var(--fs-L);
+}
+
+#password-components #length input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-bottom: 3rem;
+  width: 100%;
+  height: 1rem;
+  background: var(--clr-grey-800);
+  border-radius: 0;
+}
+
+/* Input styles for Firefox */
+#password-components #length input[type="range"]::-moz-range-thumb {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--clr-white);
+  cursor: pointer;
+
+  transition: 0.2s ease-in-out;
+}
+
+#password-components #length input[type="range"]::-moz-range-thumb:hover,
+#password-components #length input[type="range"]::-moz-range-thumb:active {
+  background-color: var(--clr-grey-800);
+  border: 2px solid var(--clr-green);
+}
+
+/* Input styles for Chrome */
+#password-components #length input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--clr-white);
+  cursor: pointer;
+
+  transition: 0.2s ease-in-out;
+}
+
+#password-components #length input[type="range"]::-webkit-slider-thumb:hover,
+#password-components #length input[type="range"]::-webkit-slider-thumb:active {
+  background-color: var(--clr-grey-800);
+  border: 2px solid var(--clr-green);
+}
+
+/* Input styles for Other */
+#password-components #length input[type="range"]::-ms-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--clr-white);
+  cursor: pointer;
+
+  transition: 0.2s ease-in-out;
+}
+
+#password-components #length input[type="range"]::-ms-thumb:hover,
+#password-components #length input[type="range"]::-ms-thumb:active {
+  background-color: var(--clr-grey-800);
+  border: 2px solid var(--clr-green);
+}
+
+#password-components #check-list {
+  margin-bottom: 3.2rem;
+
+  display: grid;
+  row-gap: 2rem;
+}
+
+#password-components #check-list li {
+  list-style-type: none;
+  color: var(--clr-white);
+}
+
+#password-components #check-list li input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid var(--clr-white);
+  margin-right: 1rem;
+}
+
+#password-components #check-list li input[type="checkbox"]:hover {
+  border: 2px solid var(--clr-green);
+}
+
+#password-components #check-list li input[type="checkbox"]:checked {
+  background-color: #a3ffae;
+  background-image: url(images/icon-check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
+
+#password-components #strength {
+  background-color: var(--clr-grey-800);
+  padding: 2rem 3.2rem;
+  margin-bottom: 3.2rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+#password-components #strength p {
+  color: var(--clr-grey-300);
+  text-transform: uppercase;
+  align-self: center;
+}
+
+#password-components #strength-levels {
+  display: flex;
+}
+
+#password-components #strength-levels > div p {
+  color: var(--clr-white);
+  font-size: var(--fs-M);
+}
+
+#password-components #strength-levels > div p {
+  margin-right: 1.5rem;
+}
+
+#password-components #strength-levels .rectangle {
+  display: flex;
+}
+
+#password-components #strength-levels .rectangle div {
+  width: 1rem;
+  height: 2.8rem;
+  margin-right: 0.7rem;
+  border: 2px solid var(--clr-white);
+  background: transparent;
+  align-self: center;
+}
+#password-components #strength-levels .tooweak {
+  display: none;
+}
+
+#password-components #strength-levels .tooweak .rectangle div:nth-of-type(1) {
+  background-color: #f74b4b;
+  border: none;
+}
+
+#password-components #strength-levels .weak {
+  display: none;
+}
+
+#password-components #strength-levels .weak .rectangle div:nth-of-type(1),
+#password-components #strength-levels .weak .rectangle div:nth-of-type(2) {
+  background-color: #fb7a56;
+  border: none;
+}
+
+#password-components #strength-levels .medium {
+  display: none;
+}
+
+#password-components #strength-levels .medium .rectangle div:nth-of-type(1),
+#password-components #strength-levels .medium .rectangle div:nth-of-type(2),
+#password-components #strength-levels .medium .rectangle div:nth-of-type(3) {
+  background-color: #f8cb63;
+  border: none;
+}
+
+#password-components #strength-levels .strong {
+  display: none;
+}
+
+#password-components #strength-levels .strong .rectangle div:nth-of-type(1),
+#password-components #strength-levels .strong .rectangle div:nth-of-type(2),
+#password-components #strength-levels .strong .rectangle div:nth-of-type(3),
+#password-components #strength-levels .strong .rectangle div:nth-of-type(4) {
+  background-color: #a3ffae;
+  border: none;
+}
+
+#password-components button {
+  position: relative;
+  width: 100%;
+  padding: 2rem 0;
+  border-radius: 0;
+  background-color: var(--clr-green);
+  border: none;
+  text-transform: uppercase;
+  color: var(--clr-grey-800);
+  cursor: pointer;
+}
+
+#password-components button:hover {
+  background: transparent;
+  color: var(--clr-green);
+  border: 1px solid var(--clr-green);
+}
+
+#password-components button[data-icon="arrow"]::after {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 16px;
+  left: 62%;
+  top: 40%;
+  background-image: url(images/icon-arrow-right.svg);
+  background-repeat: no-repeat;
+}
+
+#password-components button:hover::after {
+  background-image: url(images/icon-arrow-right-hover.svg);
+}
+
+/************************************ Media Queries ************************************/
+@media screen and (max-width: 575px) {
+  #container {
+    width: 45rem;
+  }
+
+  #password-components button[data-icon="arrow"]::after {
+    transform: translateX(2rem);
+  }
+}
+
+@media screen and (max-width: 475px) {
+  #container {
+    width: 35rem;
+  }
+
+  body {
+    font-size: 1.6rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  #password-display,
+  #password-components {
+    padding: 2rem;
+  }
+
+  #password-display > p {
+    font-size: var(--fs-M);
+  }
+
+  #password-components #length #length-text p:nth-of-type(2) {
+    font-size: var(--fs-M);
+  }
+
+  #password-components #strength {
+    padding: 1.8rem 1.6rem;
+  }
+
+  #password-components #strength-levels > div p {
+    font-size: var(--fs-S);
+  }
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Password generator app</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Password Generator</h1>
+
+      <!---------------- Display ---------------->
+      <div id="password-display">
+        <p id="password">P4$5W0rD!</p>
+        <div id="copy">
+          <p id="copied">COPIED</p>
+          <img src="images/icon-copy.svg" alt="copy" />
+        </div>
+      </div>
+
+      <!---------------- Components ----------------->
+      <div id="password-components">
+        <!-- Length -->
+        <div id="length">
+          <div id="length-text">
+            <p>Character Length</p>
+            <p id="number">0</p>
+          </div>
+          <input id="range" type="range" min="0" max="20" value="0" />
+        </div>
+
+        <!------ Check-list ------>
+        <ul id="check-list">
+          <li>
+            <input type="checkbox" id="upper" />
+            <label for="upper">Include Uppercase Letters</label>
+          </li>
+          <li>
+            <input type="checkbox" id="lower" />
+            <label for="lower">Include Lowercase Letters</label>
+          </li>
+          <li>
+            <input type="checkbox" id="num" />
+            <label for="num">Include Numbers</label>
+          </li>
+          <li>
+            <input type="checkbox" id="sym" />
+            <label for="sym">Include Symbols</label>
+          </li>
+        </ul>
+
+        <!------ Strength ------>
+        <div id="strength">
+          <p>Strength</p>
+          <div id="strength-levels">
+
+            <!-- Too Weak! -->
+            <div class="tooweak">
+              <p>TOO WEAK!</p>
+              <div class="rectangle">
+                <div class="first"></div>
+                <div class="second"></div>
+                <div class="third"></div>
+                <div class="fourth"></div>
+              </div>
+            </div>
+
+            <!-- Weak -->
+            <div class="weak">
+              <p>WEAK</p>
+              <div class="rectangle">
+                <div class="first"></div>
+                <div class="second"></div>
+                <div class="third"></div>
+                <div class="fourth"></div>
+              </div>
+            </div>
+
+            <!-- Medium -->
+            <div class="medium"">
+              <p>MEDIUM</p>
+              <div class="rectangle">
+                <div class="first"></div>
+                <div class="second"></div>
+                <div class="third"></div>
+                <div class="fourth"></div>
+              </div>
+            </div>
+
+            <!-- Strong -->
+            <div class="strong">
+              <p>STRONG</p>
+              <div class="rectangle">
+                <div class="first"></div>
+                <div class="second"></div>
+                <div class="third"></div>
+                <div class="fourth"></div>
+              </div>
+            </div>
+
+            <!-- when empty -->
+            <div class="rectangle empty">
+              <div class="first"></div>
+              <div class="second"></div>
+              <div class="third"></div>
+              <div class="fourth"></div>
+            </div>
+          </div>
+        </div>
+
+        <button class="generate" data-icon="arrow">Generate</button>
+      </div>
+    </div>
+  </body>
+
+  <!-- JS -->
+  <script src="app.js"></script>
+</html>
