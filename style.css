@@ -314,8 +314,7 @@ h1 {
   border: none;
 }
 
-#password-components button,
-#password-components button:active {
+#password-components button {
   position: relative;
   width: 100%;
   padding: 2rem 0;
@@ -364,6 +363,10 @@ h1 {
 
   #password-components button[data-icon="arrow"]::after {
     transform: translateX(2rem);
+  }
+
+  #password-components button {
+    pointer-events: none;
   }
 }
 
