@@ -20,7 +20,6 @@
   <body>
     <div id="container">
       <h1>Password Generator</h1>
-
       <!---------------- Display ---------------->
       <div id="password-display">
         <p id="password">P4$5W0rD!</p>
@@ -42,24 +41,30 @@
         </div>
 
         <!------ Check-list ------>
-        <ul id="check-list">
-          <li>
-            <input type="checkbox" id="upper" />
-            <label for="upper">Include Uppercase Letters</label>
-          </li>
-          <li>
-            <input type="checkbox" id="lower" />
-            <label for="lower">Include Lowercase Letters</label>
-          </li>
-          <li>
-            <input type="checkbox" id="num" />
-            <label for="num">Include Numbers</label>
-          </li>
-          <li>
-            <input type="checkbox" id="sym" />
-            <label for="sym">Include Symbols</label>
-          </li>
-        </ul>
+        <form action="">
+          <ul id="check-list">
+           <!-- Uppercase Letters -->
+            <li>
+              <input type="checkbox" id="upper" checked/>
+              <label for="upper">Include Uppercase Letters</label>
+            </li>
+          <!-- Lowercase Letters -->
+            <li>
+              <input type="checkbox" id="lower" />
+              <label for="lower">Include Lowercase Letters</label>
+            </li>
+          <!-- Numbers -->
+            <li>
+              <input type="checkbox" id="num" />
+              <label for="num">Include Numbers</label>
+            </li>
+          <!-- Symbols -->
+            <li>
+              <input type="checkbox" id="sym" />
+              <label for="sym">Include Symbols</label>
+            </li>
+          </ul>
+      </form>
 
         <!------ Strength ------>
         <div id="strength">
@@ -120,7 +125,7 @@
           </div>
         </div>
 
-        <button class="generate" data-icon="arrow">Generate</button>
+        <button class="generate hovered" data-icon="arrow">Generate</button>
       </div>
     </div>
   </body>

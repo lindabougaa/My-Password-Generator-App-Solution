@@ -51,7 +51,7 @@ body {
 
 /************************************ Main Styles ************************************/
 #container {
-  width: 54rem;
+  width: 56rem;
 }
 
 h1 {
@@ -224,6 +224,14 @@ h1 {
   border: none;
 }
 
+#password-components #check-list li input[type="checkbox"]:checked {
+  background-color: #a3ffae;
+  background-image: url(images/icon-check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
+
 #password-components #strength {
   background-color: var(--clr-grey-800);
   padding: 2rem 3.2rem;
@@ -318,7 +326,7 @@ h1 {
   cursor: pointer;
 }
 
-#password-components button:hover {
+#password-components button.hovered:hover {
   background: transparent;
   color: var(--clr-green);
   border: 1px solid var(--clr-green);
@@ -335,7 +343,7 @@ h1 {
   background-repeat: no-repeat;
 }
 
-#password-components button:hover::after {
+#password-components button.hovered:hover::after {
   background-image: url(images/icon-arrow-right-hover.svg);
 }
 
@@ -345,8 +353,12 @@ h1 {
     width: 45rem;
   }
 
+  #password-display > p {
+    font-size: var(--fs-M);
+  }
+
   #password-display #copy p {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   #password-components button[data-icon="arrow"]::after {
@@ -373,7 +385,7 @@ h1 {
   }
 
   #password-display > p {
-    font-size: var(--fs-M);
+    font-size: var(--fs-S);
   }
 
   #password-display #copy p {
