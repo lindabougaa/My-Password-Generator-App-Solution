@@ -326,12 +326,6 @@ h1 {
   cursor: pointer;
 }
 
-#password-components button.hovered:hover {
-  background: transparent;
-  color: var(--clr-green);
-  border: 1px solid var(--clr-green);
-}
-
 #password-components button[data-icon="arrow"]::after {
   position: absolute;
   content: "";
@@ -343,11 +337,19 @@ h1 {
   background-repeat: no-repeat;
 }
 
-#password-components button.hovered:hover::after {
-  background-image: url(images/icon-arrow-right-hover.svg);
+/************************************ Media Queries ************************************/
+@media screen and (min-width: 575px) {
+  #password-components button.hovered:hover {
+    background: transparent;
+    color: var(--clr-green);
+    border: 1px solid var(--clr-green);
+  }
+
+  #password-components button.hovered:hover::after {
+    background-image: url(images/icon-arrow-right-hover.svg);
+  }
 }
 
-/************************************ Media Queries ************************************/
 @media screen and (max-width: 575px) {
   #container {
     width: 45rem;
@@ -363,10 +365,6 @@ h1 {
 
   #password-components button[data-icon="arrow"]::after {
     transform: translateX(2rem);
-  }
-
-  #password-components button {
-    pointer-events: none;
   }
 }
 
