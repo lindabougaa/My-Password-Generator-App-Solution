@@ -314,7 +314,8 @@ h1 {
   border: none;
 }
 
-#password-components button {
+#password-components button,
+#password-components button:active {
   position: relative;
   width: 100%;
   padding: 2rem 0;

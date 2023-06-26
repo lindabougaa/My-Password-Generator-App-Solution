@@ -19,7 +19,7 @@ const medium = document.querySelector('div[class="medium"]');
 const strong = document.querySelector('div[class="strong"]');
 const empty = document.querySelector('.empty');
 
-range.addEventListener('input', () => {
+range.addEventListener('change', () => {
 
     const rangeProgress = (range.value / range.max) * 100;
     range.style.background = `linear-gradient(to right, #a3ffae ${rangeProgress}%, #191820 ${rangeProgress}%)`;
